@@ -19,13 +19,16 @@ class Transaction extends Component {
   "July", "August", "September", "October", "November", "December"
 ];
     
+        // Outer loop to create parent
         for (let d in data) {
-            console.log(data[d].month);
+
           let children = []
+          //Inner loop to create children
           
             children.push(<td>{monthNames[data[d].month]}</td>)
             children.push(<td>{data[d].total}</td>)
 
+          //Create the parent and add the children
           table.push(<tr>{children}</tr>)
         }
         return table
