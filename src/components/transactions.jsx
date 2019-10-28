@@ -17,11 +17,11 @@ class Transactions extends Component {
 
         for(let customerId in byCustomer){
            
-            let test = this.rewardPerMonth(byCustomer[customerId]);
+            let perMonth = this.rewardPerMonth(byCustomer[customerId]);
             
             let total = this.getTotalRewards(byCustomer[customerId]);
 
-            customerInfos.push({name: customerId, perMonth: test, total: total});
+            customerInfos.push({name: customerId, perMonth: perMonth, total: total});
         }
 
         return ( 
